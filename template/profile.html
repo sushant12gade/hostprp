@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} book {% endblock title %}
+
+
+{% block body %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+               
+                    <h1>  My Details </h1>
+                    <img src="/static/avatar1.png" alt="Avatar" class="avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;">
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th> username </th>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <th> firstname </th>
+                                <td>{{user.first_name}}</td>
+                            </tr>
+                            <tr>
+                                <th> lastname </th>
+                                <td>{{user.last_name}}</td>
+                            </tr>
+                            <tr>
+
+                            <tr>
+                                <th> email</th>
+                                <td>{{user.email}}</td>
+                            </tr>
+                                <th> last login </th>
+                                <td>{{user.last_login}}</td>
+                            </tr>
+                            <tr>
+                                <th> date joined </th>
+                                <td>{{user.date_joined}}</td>
+                            </tr>
+
+                            
+
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock body %}

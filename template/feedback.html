@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} feedback {% endblock title %}
+
+
+{% block body %}
+ <div class="containerfluid">
+    
+    <form method="Post" action="/feedback">
+        {% csrf_token %}
+        {% csrf_token %}
+        {% csrf_token %}
+
+ 
+     <img src="https://source.unsplash.com/1600x400/?book " class="d-block w-100" alt="...">
+     <h2><b> FeedBack Form</b></h2>
+     <div class="mb-3">
+      <label for="Input1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name"  name="name" placeholder="Name " required>
+     </div>
+
+     <div class="mb-3">
+      <label for="Input1" class="form-label">lastname</label>
+      <input type="text" class="form-control" id="lastname"  name="lastname" placeholder="lastname " required>
+     </div>
+   
+  
+     <div class="mb-3">
+      <label for="Input1" class="form-label">phone</label>
+      <input type="number" class="form-control" id="phone" length="10"  name="phone" placeholder="phone " required>
+     </div>
+     <div class="mb-3">
+      <label for="Input1" class="form-label">doctors feedback</label>
+      <input type="text" class="form-control" id="dfeedback" name="dfeedback"  placeholder="how was your experience with doctors " required>
+     </div>
+     <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+
+{% endblock body %}

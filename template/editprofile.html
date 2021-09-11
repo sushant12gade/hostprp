@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %} book {% endblock title %}
+
+
+{% block body %}
+
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <form action ="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if status %}
+        <div class="alert alert-primary">{{status}}</div>
+        {% endif %}
+        
+        <div class="form-group">
+          <div class ="row">
+
+            <div class="col-md-6">
+               
+            
+            <table>
+            <br>
+            <h2> EditProfile </h2>
+            <img src="/static/avatar1.png" alt="Avatar" class="avatar" style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%;">
+            <tr>
+            <th>
+            <td>
+            <br>
+              <label>Username</label>
+              <input type="text" class= "form-control" name="uname" placeholder="enter user name" value="{{user.username}}">
+            </td>
+              
+            </th>
+            </tr>
+            
+            </div>
+            <div class="col-md-6">
+            
+            <tr>
+            <th>
+            <td>
+              <label>first name</label>
+              <input type="text" class= "form-control" name="fname" placeholder="enter firt name" value="{{user.first_name}}">
+
+              <td>
+            </th>
+            </tr>
+            
+            </div>
+            <div class="col-md-6">
+            
+            <tr>
+            <th>
+            <td>
+              <label>last name</label>
+              <input type="text" class= "form-control" name="lname" placeholder="enter last name" value="{{user.last_name}}">
+            </td>
+              </th>
+            </tr>
+          
+            </div>
+            
+            <div class="col-md-6">
+            
+            <tr>
+            <th>
+            <td>
+              <label>email</label>
+              <input type="email" class= "form-control" name="email" placeholder="enter email" value="{{user.email}}">
+            </td>
+            </th>
+            </tr>
+            </table>
+            </div>
+           
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group">
+          <input type="submit" name="change profile" value="save chnages " class="btn btn-primary " style="width: 50%;border-radius:20px;">
+          
+
+            </div>
+            <br>
+
+           
+            
+            
+            </form>
+          </div>
+        </div>
+      </form>
+    </div>
+   
+  </div>
+</div>
+{% endblock body %}

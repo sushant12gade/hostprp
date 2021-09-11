@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} book {% endblock title %}
+
+
+{% block body %}
+ <div class="containerfluid">
+    
+    <form method="Post" action="/book">
+        {% csrf_token %}
+
+        {% csrf_token %}
+ 
+     <img src="https://source.unsplash.com/1600x400/?hotel" class="d-block w-100" alt="...">
+     <h2>  <b> Booking For  Appoinments </b></h2>
+     <div class="mb-3">
+      <label for="name2" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name2"  name="name2" placeholder="Name " required>
+     </div>
+
+     <div class="mb-3">
+      <label for="Lastname" class="form-label"></label>
+      <input type="text" class="form-control" id="Lastname"  name="Lastname" placeholder="Lastname" required>
+     </div>
+   
+  
+      <select class="form-select" aria-label="Default select example" name="Gender"  required>
+  <option selected>Gender</option>
+  <option value="1">Male</option>
+  <option value="2">Female</option>
+   
+</select>
+<br>
+       <select class="form-select" aria-label="Default select example " name="Age"required>
+      
+  <option selected>Age</option>
+  <option value="1">18-30</option>
+  <option value="2">30-60</option>
+  <option value="2">above 60</option>
+</select><br>
+
+  <select class="form-select" aria-label="Default select example "  name="Disease" required>
+  <option selected>disease</option>
+  <option value="1">Cancer</option>
+  <option value="2">Diabetes</option>
+  <option value="3">Orthopedic</option>
+  <option value="4">Cardio</option>
+  <option value="4">Other</option>
+
+   
+</select> <br>
+
+    
+<br> 
+
+ <div class="mb-3">
+      <label for="text" class="form-label">Doctors name</label>
+      <input type="text" class="form-control" id="Dname" name="Dname"  placeholder=" Doctors name" required>
+     </div>
+
+  
+
+ <div class="mb-3">
+      <label for="date" class="form-label">checkin time</label>
+      <input type="date" class="form-control" id="date" name="date"  placeholder="started meds on date" required>
+     </div>
+
+ 
+
+ 
+
+
+     <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+
+{% endblock body %}
